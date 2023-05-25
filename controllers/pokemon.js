@@ -6,7 +6,7 @@ function getAllPokemon(req, res) {
 
 function getPokemonById(req, res) {
   const pokeId = req.params.id;
-  res.send(pokemonData.find((pokemon) => (pokemon.id = pokeId)));
+  res.send(pokemonData.find((pokemon) => pokemon.id == pokeId));
 }
 
 module.exports = { getAllPokemon, getPokemonById };
