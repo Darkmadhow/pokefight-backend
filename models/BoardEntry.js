@@ -7,6 +7,7 @@ const BoardEntry = new Schema({
   victory: Boolean,
   round: Number,
   score: Number,
+  timestamp: { type: Date, default: Date.now },
 });
 
 module.exports = mongoose.model("boardentry", BoardEntry, "leaderboardentries");

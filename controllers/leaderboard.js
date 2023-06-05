@@ -12,7 +12,7 @@ async function uploadScore(req, res) {
 }
 async function getLeaderboard(req, res) {
   try {
-    const allEntries = await BoardEntry.find();
+    const allEntries = await BoardEntry.find().sort({ timestamp: -1 });
     res.status(200).json(allEntries);
   } catch (err) {
     console.log(err);
